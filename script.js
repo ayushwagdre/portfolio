@@ -1,11 +1,35 @@
+// Dark Mode Toggle
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Check for saved theme preference or default to 'light'
+const currentTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', currentTheme);
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Add animation to the toggle
+    themeToggle.style.transform = 'scale(0.9) rotate(15deg)';
+    setTimeout(() => {
+        themeToggle.style.transform = 'scale(1) rotate(0deg)';
+    }, 150);
+});
+
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
@@ -234,6 +258,90 @@ document.addEventListener('keydown', (e) => {
             document.body.style.animation = '';
         }, 5000);
     }
+});
+
+// Testimonials Carousel
+class TestimonialCarousel {
+    constructor() {
+        this.currentSlide = 0;
+        this.slides = document.querySelectorAll('.testimonial-card');
+        this.dots = document.querySelectorAll('.dot');
+        this.prevBtn = document.querySelector('.prev-btn');
+        this.nextBtn = document.querySelector('.next-btn');
+        this.track = document.querySelector('.testimonial-track');
+        this.autoSlideInterval = null;
+        
+        if (this.slides.length > 0) {
+            this.init();
+        }
+    }
+    
+    init() {
+        this.updateSlider();
+        this.bindEvents();
+        this.startAutoSlide();
+    }
+    
+    bindEvents() {
+        if (this.prevBtn) this.prevBtn.addEventListener('click', () => this.prevSlide());
+        if (this.nextBtn) this.nextBtn.addEventListener('click', () => this.nextSlide());
+        
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => this.goToSlide(index));
+        });
+        
+        // Pause auto-slide on hover
+        const slider = document.querySelector('.testimonials-slider');
+        if (slider) {
+            slider.addEventListener('mouseenter', () => this.stopAutoSlide());
+            slider.addEventListener('mouseleave', () => this.startAutoSlide());
+        }
+    }
+    
+    updateSlider() {
+        // Update active states
+        this.slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === this.currentSlide);
+        });
+        
+        this.dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === this.currentSlide);
+        });
+    }
+    
+    nextSlide() {
+        this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+        this.updateSlider();
+    }
+    
+    prevSlide() {
+        this.currentSlide = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
+        this.updateSlider();
+    }
+    
+    goToSlide(index) {
+        this.currentSlide = index;
+        this.updateSlider();
+    }
+    
+    startAutoSlide() {
+        this.stopAutoSlide();
+        this.autoSlideInterval = setInterval(() => {
+            this.nextSlide();
+        }, 5000);
+    }
+    
+    stopAutoSlide() {
+        if (this.autoSlideInterval) {
+            clearInterval(this.autoSlideInterval);
+            this.autoSlideInterval = null;
+        }
+    }
+}
+
+// Initialize testimonials carousel
+document.addEventListener('DOMContentLoaded', () => {
+    new TestimonialCarousel();
 });
 
 // Add rainbow animation for easter egg

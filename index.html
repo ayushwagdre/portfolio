@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayush Wagdre - Senior Backend Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="services-testimonials.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -29,6 +36,12 @@
                 </li>
                 <li class="nav-item">
                     <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials" class="nav-link">Testimonials</a>
                 </li>
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
@@ -55,8 +68,18 @@
                     real-time analytics systems, and orchestration platforms using GoLang, PostgreSQL, and cloud technologies.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-handshake"></i>
+                        <span>Hire Me</span>
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fas fa-folder-open"></i>
+                        <span>View Projects</span>
+                    </a>
+                    <a href="/resume.pdf" class="btn btn-outline" target="_blank">
+                        <i class="fas fa-download"></i>
+                        <span>View Resume</span>
+                    </a>
                 </div>
                 <div class="hero-social">
                     <a href="mailto:jmaayushwagdre@gmail.com" class="social-link" title="Email">
@@ -280,6 +303,85 @@
             </div>
         </section>
 
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Services</h2>
+                <p class="section-subtitle">What I can do for you</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend Development</h3>
+                        <p>Building scalable microservices, APIs, and server-side applications using GoLang, Ruby on Rails, and modern cloud technologies.</p>
+                        <ul class="service-features">
+                            <li>RESTful API Development</li>
+                            <li>Microservices Architecture</li>
+                            <li>Database Design & Optimization</li>
+                            <li>Cloud Integration (AWS, GCP)</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Database Optimization</h3>
+                        <p>Designing robust, scalable database architectures that handle high-traffic applications and complex queries efficiently.</p>
+                        <ul class="service-features">
+                            <li>PostgreSQL & MongoDB Optimization</li>
+                            <li>Query Performance Tuning</li>
+                            <li>Data Modeling & Schema Design</li>
+                            <li>Redis Caching Strategies</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud & DevOps</h3>
+                        <p>Setting up CI/CD pipelines, containerization, and cloud deployment strategies for seamless application delivery.</p>
+                        <ul class="service-features">
+                            <li>Docker & Containerization</li>
+                            <li>CI/CD Pipeline Setup</li>
+                            <li>AWS & GCP Deployment</li>
+                            <li>Monitoring & Logging</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h3>System Design</h3>
+                        <p>Architecting scalable systems that can handle millions of users with high availability and performance.</p>
+                        <ul class="service-features">
+                            <li>Distributed System Architecture</li>
+                            <li>Load Balancing & Scaling</li>
+                            <li>Performance Optimization</li>
+                            <li>Real-time Analytics</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Technical Mentorship</h3>
+                        <p>Helping junior developers and teams adopt best practices, code reviews, and technical guidance.</p>
+                        <ul class="service-features">
+                            <li>Code Review & Best Practices</li>
+                            <li>Architecture Guidance</li>
+                            <li>Team Technical Leadership</li>
+                            <li>Knowledge Sharing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Skills Section -->
         <section id="skills" class="skills">
             <div class="container">
@@ -384,6 +486,97 @@
                             <i class="fas fa-terminal"></i>
                             <span>LeetCode</span>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Clients Say</h2>
+                <p class="section-subtitle">Testimonials from satisfied clients and colleagues</p>
+                <div class="testimonials-slider" id="testimonialsSlider">
+                    <div class="testimonial-track">
+                        <div class="testimonial-card active">
+                            <div class="testimonial-content">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p>"Ayush delivered exceptional backend architecture for our fintech platform. His expertise in GoLang and microservices helped us scale to handle 100K+ daily transactions seamlessly."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Sarah Johnson</h4>
+                                        <span>CTO, PayFlow Solutions</span>
+                                    </div>
+                                    <div class="author-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p>"Working with Ayush was a game-changer for our analytics platform. His real-time data processing solutions improved our system performance by 300%. Highly recommended!"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Michael Chen</h4>
+                                        <span>Founder, DataViz Pro</span>
+                                    </div>
+                                    <div class="author-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p>"Ayush's expertise in system orchestration and configuration management transformed our development workflow. Professional, reliable, and delivers quality code every time."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4>Emily Rodriguez</h4>
+                                        <span>Lead Engineer, TechCorp</span>
+                                    </div>
+                                    <div class="author-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-nav">
+                        <button class="nav-btn prev-btn" aria-label="Previous testimonial">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="testimonial-dots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
+                        </div>
+                        <button class="nav-btn next-btn" aria-label="Next testimonial">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
