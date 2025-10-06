@@ -145,8 +145,8 @@ const Contact = () => {
                 Get a detailed overview of my experience, skills, and achievements
               </p>
               <motion.a
-                href="#"
-                download
+                href="/CV_Ayush_Wagdre.pdf"
+                download="CV_Ayush_Wagdre.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-600 rounded-lg font-medium hover:bg-gray-100 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

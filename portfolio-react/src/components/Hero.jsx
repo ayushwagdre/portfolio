@@ -70,8 +70,8 @@ const Hero = () => {
             Hire Me
           </motion.button>
           <motion.a
-            href="#"
-            download
+            href="/CV_Ayush_Wagdre.pdf"
+            download="CV_Ayush_Wagdre.pdf"
             className="px-8 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg font-medium hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
