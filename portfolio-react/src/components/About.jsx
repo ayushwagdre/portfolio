@@ -49,7 +49,7 @@ const About = () => {
               Senior Software Engineer at Simpl
             </h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              I'm a Senior Software Engineer with 3+ years of experience specializing in GoLang and Ruby on Rails.
+              I'm a Senior Software Engineer with 4+ years of experience specializing in GoLang and Ruby on Rails.
               Currently at Simpl, I pioneer scalable payment solutions and microservices architecture that process
               millions in transactions. I increased monthly TPV from ₹3 Cr to ₹50 Cr through innovative payment
               integration systems.
@@ -62,7 +62,7 @@ const About = () => {
             <div className="grid grid-cols-2 gap-4 pt-4">
               {[
                 { label: 'TPV Growth', value: '₹3Cr→₹50Cr' },
-                { label: 'Years Experience', value: '3.5+' },
+                { label: 'Years Experience', value: '4.5+' },
                 { label: 'Tech Stack', value: '10+' },
                 { label: 'Key Integrations', value: '15+' },
               ].map((stat) => (

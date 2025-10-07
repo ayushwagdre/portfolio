@@ -38,25 +38,25 @@ const Projects = () => {
     {
       title: 'Personal Finance Platform',
       description:
-        'Engineered a personal finance dashboard integrating IPO tracker, company earnings calendar, stock screener, and wishlist with premium features.',
+        'Fullstack finance dashboard with React frontend and backend APIs. Features IPO tracker, company earnings calendar, stock screener, wishlist management, and premium subscription features with responsive design.',
       image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=500&h=300&fit=crop',
-      tech: ['React', 'JavaScript', 'HTML', 'CSS'],
+      tech: ['React', 'JavaScript', 'Node.js', 'HTML/CSS'],
       github: 'https://github.com/ayushwagdre',
       demo: '#',
     },
     {
       title: 'Lonari Kunbi Community Platform',
       description:
-        'Building digital community platform with Google Sign-In, user registration, interactive features, role-based access control for biodata management and user matchmaking.',
+        'Fullstack community platform with GoLang backend and React frontend. Implements Google Sign-In, user registration, role-based access control, biodata management system, and intelligent matchmaking features hosted on GCP.',
       image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=500&h=300&fit=crop',
-      tech: ['GoLang', 'Firebase', 'GCP', 'React'],
+      tech: ['GoLang', 'React', 'Firebase', 'GCP'],
       github: 'https://github.com/ayushwagdre',
       demo: '#',
     },
     {
       title: 'Access-Based Control Website',
       description:
-        'Designed secure Role-based web application with authentication and authorization. Enabled role-specific access to blogs, portfolios, and testimonials with responsive UI.',
+        'Fullstack role-based access control platform with Python backend and React frontend. Features secure authentication, authorization middleware, role-specific content delivery for blogs, portfolios, and testimonials with responsive design.',
       image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&h=300&fit=crop',
       tech: ['Python', 'React', 'JavaScript', 'HTML/CSS'],
       github: 'https://github.com/ayushwagdre',

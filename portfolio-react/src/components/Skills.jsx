@@ -10,6 +10,7 @@ import {
   FaDocker,
   FaAws,
   FaPython,
+  FaNodeJs,
 } from 'react-icons/fa';
 import {
   SiMongodb,
@@ -19,6 +20,9 @@ import {
   SiGo,
   SiFirebase,
   SiGooglecloud,
+  SiTailwindcss,
+  SiVite,
+  SiTypescript,
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -27,12 +31,21 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: 'Languages',
+      title: 'Backend',
       skills: [
         { name: 'GoLang', icon: SiGo, color: 'text-cyan-500' },
-        { name: 'Ruby', icon: SiRubyonrails, color: 'text-red-600' },
+        { name: 'Ruby on Rails', icon: SiRubyonrails, color: 'text-red-600' },
+        { name: 'Node.js', icon: FaNodeJs, color: 'text-green-600' },
         { name: 'Python', icon: FaPython, color: 'text-blue-500' },
+      ],
+    },
+    {
+      title: 'Frontend',
+      skills: [
+        { name: 'React', icon: FaReact, color: 'text-cyan-500' },
+        { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600' },
         { name: 'JavaScript', icon: FaJs, color: 'text-yellow-500' },
+        { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400' },
         { name: 'HTML/CSS', icon: FaHtml5, color: 'text-orange-500' },
       ],
     },
@@ -42,13 +55,6 @@ const Skills = () => {
         { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-600' },
         { name: 'MongoDB', icon: SiMongodb, color: 'text-green-600' },
         { name: 'Redis', icon: SiRedis, color: 'text-red-500' },
-      ],
-    },
-    {
-      title: 'Frameworks',
-      skills: [
-        { name: 'React', icon: FaReact, color: 'text-cyan-500' },
-        { name: 'Ruby on Rails', icon: SiRubyonrails, color: 'text-red-600' },
       ],
     },
     {
@@ -81,7 +87,7 @@ const Skills = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-purple-600 mx-auto rounded-full"></div>
           <p className="mt-6 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            A comprehensive toolkit for building modern, scalable web applications
+            A comprehensive fullstack toolkit for building modern, scalable end-to-end web applications
           </p>
         </motion.div>
 
@@ -135,8 +141,9 @@ const Skills = () => {
           </h3>
           <div className="space-y-6">
             {[
-              { name: 'Backend Development (GoLang, Ruby)', level: 95 },
-              { name: 'Microservices Architecture', level: 90 },
+              { name: 'Backend Development (GoLang, Ruby, Node.js)', level: 95 },
+              { name: 'Frontend Development (React, TypeScript)', level: 90 },
+              { name: 'Fullstack Architecture & Design', level: 90 },
               { name: 'Database Design & Optimization', level: 88 },
               { name: 'Payment Systems Integration', level: 92 },
               { name: 'Cloud & DevOps (AWS, GCP)', level: 80 },

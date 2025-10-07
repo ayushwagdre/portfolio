@@ -45,7 +45,7 @@ const Hero = () => {
             <span className="text-gradient">Ayush Wagdre</span>
           </h1>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
-            Senior Software Engineer
+            Senior Software Developer & Fullstack Developer
           </h2>
         </motion.div>
 
